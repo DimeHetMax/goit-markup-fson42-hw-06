@@ -8,6 +8,7 @@
   --secondary-background-color: #f5f4fa;
   --social-media-fill: #afb1b8;
   --social-media-fill-dark: #ffffff;
+  --modal-svg-fill: #212121;
 }
 h1,
 h2,
@@ -724,6 +725,7 @@ img {
 }
 
 .modal-field__svg {
+  fill: var(--modal-svg-fill);
   position: absolute;
   top: 55%;
   left: 12px;
