@@ -60,7 +60,7 @@
             <!-- Особенности -->
             <section class="section-lead">
                 <div class="container">
-                    <h2 class="title title-hidden">Особенности</h2>
+                    <h2 class="title visually-hidden">Особенности</h2>
                     <ul class="section-lead__list list">   
                         <li class="section-lead__item">
                             <div class="section-lead__feature--wrapper">
@@ -410,22 +410,48 @@
                 </button>
                 <p class="modal__text">Оставьте свои данные, мы вам перезвоним</p>
                 <form class="modal__form" action="" method="post">
-                    <label class="modal__label" for="name" > Имя </label>
-                    <input class="modal__input" type="text" name="name" id="name" required autofocus>
-                    
-                    <label class="modal__label" for="tel">Телефон</label>
-                    <input class="modal__input" type="tel" name="tel" id="tel">
-                    
-                    <label class="modal__label" for="email">Почта</label>
-                    <input class="modal__input" type="email" name="email" id="email">
-                    
+                    <div class="modal-field">
+                        <label class="modal__label" for="name"> Имя </label>
+                        <span class="modal__input-wrapper">
+                            <input class="modal__input" type="text" name="name" id="name" minlength="2" maxlength="20" required autofocus>
+                            <svg class="modal-field__svg" width="18" height="18">
+                                <use href="./images/sprite.svg#icon-person"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-field">
+                        <label class="modal__label" for="tel">Телефон</label>
+                        <span class="modal__input-wrapper">  
+                            <input class="modal__input" type="tel" name="tel" id="tel" required>
+                            <svg class="modal-field__svg" width="18" height="18">
+                                <use href="./images/sprite.svg#icon-tel"></use>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="modal-field">
+                        <label class="modal__label" for="email">Почта</label>
+                        <span class="modal__input-wrapper">
+                            <input class="modal__input" type="email" name="email" id="email" required>
+                            <svg class="modal-field__svg" width="18" height="18">
+                                <use href="./images/sprite.svg#icon-email"></use>
+                            </svg>
+                        </span>
+                    </div>
                     <label class="modal__label" for="comment">Комментарий</label>
-                    <textarea class="modal__comment" name="comment" id="comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                    <textarea class="modal__comment" name="comment" id="comment"  placeholder="Введите текст" maxlength="400"></textarea>
                     
-                    <input  class="modal__label-checkbox" type="checkbox" name="checkbox" id="checkbox">
-                    <label class="modal__label modal__label-policy" for="checkbox"> Соглашаюсь с рассылкой и принимаю&#160;<a class="modal__label-link" href="">Условия договора</a></label>
+                    <input  class="modal__label-checkbox visually-hidden" type="checkbox" name="checkbox" id="checkbox">
+                    <label class="modal__label-policy" for="checkbox">
+                        <span class="checkbox-custom">
+                            <svg class="checkbox-custom__svg" width="11" height="8">
+                                <use href="./images/sprite.svg#icon-check"></use>
+                            </svg>
+                        </span> 
+                        Соглашаюсь с рассылкой и принимаю&#160;
+                        <a class="modal__label-link" href="">Условия договора</a>
+                    </label>
                     
-                    <button class="modal__button button" type="submit">Отправить</button>
+                    <button class="modal__button button" type="submit" >Отправить</button>
                 </form>    
             </div>
         </div>
